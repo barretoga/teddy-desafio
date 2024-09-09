@@ -1,0 +1,56 @@
+<button
+  (click)="toggleDrawer()"
+  class="p-2 transition duration-300 ease-in-out hover:bg-gray-200 rounded-md"
+>
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png"
+    alt="Menu"
+    class="w-4 h-4"
+  />
+</button>
+
+<div
+  [ngClass]="{
+    'fixed flex flex-col justify-between top-0 left-0 w-64 h-full bg-white shadow-md z-50 transform': true,
+    'translate-x-0': isOpen,
+    '-translate-x-full': !isOpen
+  }"
+  class="transition-transform duration-300 ease-in-out"
+>
+  <nav class="mt-10 flex flex-col gap-y-4 p-4">
+    <button
+      (click)="toggleDrawer()"
+      class="p-2 hover:bg-gray-200 rounded-md transition max-w-[34px] -mt-3"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"
+        alt="Close"
+        class="w-4 h-4"
+      />
+    </button>
+    <a routerLink="/partners" class="text-lg hover:underline">Parceiros</a>
+    <a routerLink="/partners/register" class="text-lg hover:underline"
+      >Cadastrar parceiro</a
+    >
+    <a routerLink="/external-companies" class="text-lg hover:underline"
+      >Empresas externas</a
+    >
+    <a routerLink="/external-companies/register" class="text-lg hover:underline"
+      >Cadastrar empresa externa</a
+    >
+  </nav>
+
+  <button (click)="handleLogout()" type="button" class="block sm:hidden p-4">
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png"
+      alt="Logout"
+      class="w-[20px] h-[20px] hover:cursor-pointer ml-4"
+    />
+  </button>
+</div>
+
+<div
+  *ngIf="isOpen"
+  (click)="toggleDrawer()"
+  class="fixed top-0 left-0 w-full h-full bg-black/50 z-40"
+></div>

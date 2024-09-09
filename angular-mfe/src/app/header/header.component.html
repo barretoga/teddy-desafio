@@ -1,0 +1,47 @@
+<!-- Header Container -->
+<div
+  class="flex w-full fixed top-0 p-2 px-7 items-center justify-between bg-white"
+>
+  <!-- Logo and Drawer -->
+  <div class="flex items-center gap-x-2">
+    <app-drawer></app-drawer>
+
+    <div class="flex items-center gap-x-2 hover:cursor-pointer">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2938/2938228.png"
+        class="object-fill w-[70px] h-[70px]"
+      />
+      <h1 class="text-2xl font-bold">Teddy</h1>
+    </div>
+  </div>
+
+  <!-- User Info and Logout -->
+  <div class="flex items-center gap-x-2">
+    <span class="w-full max-w-[300px] sm:block hidden truncate">
+      {{ returnUser() }}
+    </span>
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/4042/4042356.png"
+      class="
+        object-fill
+        w-[50px]
+        h-[50px]
+        border
+        rounded-full
+        transition
+        duration-300
+        ease-in-out
+        hover:shadow-lg
+        dark:hover:shadow-black/30
+        hover:cursor-pointer
+      "
+    />
+    <button (click)="handleLogout()" type="button" class="hidden sm:block">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png"
+        alt="Logout"
+        class="w-[20px] h-[20px] hover:cursor-pointer ml-4"
+      />
+    </button>
+  </div>
+</div>
