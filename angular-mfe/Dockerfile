@@ -1,0 +1,27 @@
+# Use uma imagem base com Node.js
+FROM node:21.7.3
+
+# Instale o Angular CLI globalmente
+RUN npm install -g @angular/cli@15.2.11
+
+# Crie e defina o diretório de trabalho
+WORKDIR /app
+
+# Instale pnpm globalmente
+RUN npm install -g pnpm@8.6.12
+
+# Instala o webpack globalmente
+RUN pnpm add -g webpack@5 webpack-cli@5
+
+# Copie os arquivos de configuração do projeto e instale as dependências
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install
+
+# Copie o restante do código-fonte
+COPY . .
+
+# Exponha a porta que o servidor Angular MFE vai usar
+EXPOSE 8081
+
+# Comando para iniciar o servidor Angular MFE
+CMD ["pnpm", "start"]
