@@ -25,11 +25,13 @@ const Header: FC = () => {
         <Drawer />
 
         <div className="flex items-center gap-x-2 hover:cursor-pointer">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/2938/2938228.png"
-            className="object-fill w-[70px] h-[70px]"
-          />
-          <h1 className="text-2xl font-bold">Teddy</h1>
+          <a href="/" className="flex items-center gap-x-2">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2938/2938228.png"
+              className="object-fill w-[70px] h-[70px]"
+            />
+            <h1 className="text-2xl font-bold">Teddy</h1>
+          </a>
         </div>
       </div>
 

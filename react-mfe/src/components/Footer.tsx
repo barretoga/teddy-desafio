@@ -52,12 +52,12 @@ const Footer: FC = () => {
             <h4 className="text-lg text-gray-900 font-medium mb-7">Sobre</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
-                <a href="/about" className="text-gray-600 hover:text-gray-900">
+                <a href="https://github.com/barretoga/teddy-desafio/blob/main/README.md" className="text-gray-600 hover:text-gray-900">
                   Sobre o desafio
                 </a>
               </li>
               <li className="mb-6">
-                <a href="/" className="text-gray-600 hover:text-gray-900">
+                <a href="https://github.com/barretoga/teddy-desafio" className="text-gray-600 hover:text-gray-900">
                   Repositório
                 </a>
               </li>
