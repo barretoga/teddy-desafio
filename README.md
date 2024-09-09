@@ -8,6 +8,7 @@ Desafio desenvolvido para a vaga de Desenvolvedor Front-End pela [Teddy Open Fin
 - Webpack@5;
 - PNPM@8.6.12;
 - Tailwindcss;
+- Docker;
 
 # Setup
 Para realizar o setup do projeto é necessário ter ambiente com as seguintes ferramentas:
@@ -15,6 +16,8 @@ Para realizar o setup do projeto é necessário ter ambiente com as seguintes fe
 - Node@21.7.3
 - Angular@15.2.0
 - AngularCLI@15.2.11
+
+Também é possível realizar o setup utilizando Docker, facilitando na hora de subir a aplicação.
 
 ## Setup Commands
 1. **Single SPA server**
@@ -34,6 +37,36 @@ pnpm start
 pnpm i
 pnpm start
 ```
+
+# Docker Setup
+
+Para simplificar o setup do projeto, você pode utilizar Docker e Docker Compose para subir a aplicação e seus micro frontends. Siga os passos abaixo:
+
+## Pré-requisitos
+Certifique-se de que você tenha as seguintes ferramentas instaladas no seu ambiente:
+- [Docker](https://docs.docker.com/engine/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+## Instruções para rodar com o Docker Compose
+1. **Clone o repositório:**
+```bash
+git clone git@github.com:barretoga/teddy-desafio.git
+cd teddy-desafio
+```
+
+2. **Construa e inicie os containers:**
+No diretório raiz do projeto, execute o comando:
+```bash
+docker-compose up --build
+```
+Isso fará com que os containers do Single SPA, React-MFE, e Angular-MFE sejam construídos e executados. As aplicações ficarão disponíveis nas seguintes portas:
+
+Single SPA: http://localhost:9000
+React-MFE: http://localhost:8080
+Angular-MFE: http://localhost:8081
+
+3. **Acessar a aplicação:**
+Agora você pode acessar a aplicação principal pela URL do Single SPA (http://localhost:9000) e navegar entre os Front-Ends.
 
 # Páginas/Funcionalidades
 
