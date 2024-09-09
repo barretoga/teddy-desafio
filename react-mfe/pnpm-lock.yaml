@@ -56,6 +56,9 @@ dependencies:
   single-spa:
     specifier: ^5.9.3
     version: 5.9.3
+  single-spa-angular:
+    specifier: ^9.1.2
+    version: 9.1.2(@angular/core@18.2.3)(json5@2.2.3)(single-spa@5.9.3)(style-loader@4.0.0)
   single-spa-react:
     specifier: ^4.3.1
     version: 4.3.1(@types/react-dom@18.3.0)(@types/react@18.3.5)(react@18.3.1)
@@ -193,6 +196,18 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
+
+  /@angular/core@18.2.3(rxjs@6.6.7)(zone.js@0.14.10):
+    resolution: {integrity: sha512-VGhMJxj7d0rYpqVfQrcGRB7EE/BCziotft/I/YPl6bOMPSAvMukG7DXQuJdYpNrr62ks78mlzHlZX/cdmB9Prw==}
+    engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0}
+    peerDependencies:
+      rxjs: ^6.5.3 || ^7.4.0
+      zone.js: ~0.14.10
+    dependencies:
+      rxjs: 6.6.7
+      tslib: 2.7.0
+      zone.js: 0.14.10
+    dev: false
 
   /@babel/code-frame@7.12.11:
     resolution: {integrity: sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==}
@@ -6940,7 +6955,6 @@ packages:
     engines: {npm: '>=2.0.0'}
     dependencies:
       tslib: 1.14.1
-    dev: true
 
   /safe-array-concat@1.1.2:
     resolution: {integrity: sha512-vj6RsCsWBCf19jIeHEfkRMw8DPiBb+DMXklQ/1SGDHOMlHdPUkZXFQ2YdplS23zESTijAcurb1aSgJA3AgMu1Q==}
@@ -7156,6 +7170,21 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
     dev: true
+
+  /single-spa-angular@9.1.2(@angular/core@18.2.3)(json5@2.2.3)(single-spa@5.9.3)(style-loader@4.0.0):
+    resolution: {integrity: sha512-HXhjKOr8WAtidjS+dfQzYbOj3C6d6t5Rcp5zhd9QWddCT6iDTNt0jQuSQF6OsudyFOji3JlkJkeIUr06zFgsAA==}
+    peerDependencies:
+      '@angular/core': '>=16.0.0'
+      json5: '*'
+      single-spa: '>=4.0.0'
+      style-loader: ^3.3.1
+    dependencies:
+      '@angular/core': 18.2.3(rxjs@6.6.7)(zone.js@0.14.10)
+      json5: 2.2.3
+      single-spa: 5.9.3
+      style-loader: 4.0.0(webpack@5.89.0)
+      tslib: 2.7.0
+    dev: false
 
   /single-spa-react@4.3.1(@types/react-dom@18.3.0)(@types/react@18.3.5)(react@18.3.1):
     resolution: {integrity: sha512-RD93IpUfjuHnSiPSb3zPIUYkUuDAmxj3L1fkGjVzmSCRhEcc7oZBEe68k32oN36IqyOyQPJrCiPUOMAx6aC26g==}
@@ -7433,7 +7462,6 @@ packages:
       webpack: ^5.27.0
     dependencies:
       webpack: 5.89.0(webpack-cli@4.10.0)
-    dev: true
 
   /styled-components@5.3.11(@babel/core@7.23.3)(react-dom@18.3.1)(react-is@17.0.2)(react@18.3.1):
     resolution: {integrity: sha512-uuzIIfnVkagcVHv9nE0VPlHPSCmXIUGKfJ42LNjxCCTDTL5sgnJ8Z7GZBq0EnLYGln77tPpEpExt2+qa+cZqSw==}
@@ -7696,11 +7724,9 @@ packages:
 
   /tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
-    dev: true
 
   /tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
-    dev: true
 
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -8461,6 +8487,10 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
+  /zone.js@0.14.10:
+    resolution: {integrity: sha512-YGAhaO7J5ywOXW6InXNlLmfU194F8lVgu7bRntUF3TiG8Y3nBK0x1UJJuHUP/e8IyihkjCYqhCScpSwnlaSRkQ==}
+    dev: false
+
   file:(@babel/core@7.23.3)(react-is@17.0.2)(redux@5.0.1)(webpack@5.89.0):
     resolution: {directory: '', type: directory}
     id: 'file:'
@@ -8472,6 +8502,7 @@ packages:
       '@types/react-dom': 18.3.0
       '@types/systemjs': 6.1.1
       '@types/webpack-env': 1.16.2
+      axios: 1.7.7
       dotenv-webpack: 8.1.0(webpack@5.89.0)
       react: 18.3.1
       react-custom-elements: 1.0.7(@babel/core@7.23.3)(react-dom@18.3.1)(react-is@17.0.2)(react@18.3.1)
@@ -8484,6 +8515,7 @@ packages:
       single-spa-react: 4.3.1(@types/react-dom@18.3.0)(@types/react@18.3.5)(react@18.3.1)
     transitivePeerDependencies:
       - '@babel/core'
+      - debug
       - react-is
       - redux
       - webpack

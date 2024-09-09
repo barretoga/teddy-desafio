@@ -13,6 +13,10 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "single-spa",
+              "style-loader"
+            ],
             "outputPath": "dist/angular-mfe",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
@@ -26,7 +30,7 @@
               "libraryName": "angular-mfe",
               "libraryTarget": "umd"
             },
-            "deployUrl": "http://localhost:4200/"
+            "deployUrl": "http://localhost:8081/"
           },
           "configurations": {
             "production": {

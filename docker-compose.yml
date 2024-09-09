@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  external-app:
+    build:
+      context: . # O diretório onde está o Dockerfile do app principal
+      dockerfile: Dockerfile # Nome do Dockerfile do app principal
+    ports:
+      - "9000:9000" # Mapeia a porta 9000 do container para a porta 9000 da máquina host
+    depends_on:
+      - react-mfe
+      - angular-mfe
+
+  react-mfe:
+    build:
+      context: ./react-mfe # Diretório onde está o Dockerfile do React MFE
+      dockerfile: Dockerfile # Dockerfile do React MFE (garanta que o nome do arquivo é 'Dockerfile')
+    ports:
+      - "8080:8080" # Mapeia a porta 8080 do container React para a porta 8080 da máquina host (ajuste conforme necessário)
+
+  angular-mfe:
+    build:
+      context: ./angular-mfe # Diretório onde está o Dockerfile do Angular MFE
+      dockerfile: Dockerfile # Dockerfile do Angular MFE (garanta que o nome do arquivo é 'Dockerfile')
+    ports:
+      - "8081:8081" # Mapeia a porta 8081 do container Angular para a porta 8081 da máquina host (ajuste conforme necessário)

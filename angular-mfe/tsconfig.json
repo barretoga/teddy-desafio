@@ -19,7 +19,9 @@
     "target": "es6",
     "module": "es6",
     "useDefineForClassFields": false,
-    "lib": ["es6", "dom"]
+    "lib": ["es6", "dom"],
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["single-spa"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
