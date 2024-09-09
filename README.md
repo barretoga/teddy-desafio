@@ -1,7 +1,7 @@
-# Desafio Teddy
+# 🐻 Desafio Teddy Open Finance - Front-End Developer
 Desafio desenvolvido para a vaga de Desenvolvedor Front-End pela [Teddy Open Finance](https://teddydigital.io/). O desafio consiste em criar uma aplicação que use micro frontends, utilizando obrigatorimanete o Angular@15 e outro framework (O escolhido nesse projeto do React@18).
 
-# Technologies
+# 🧑‍💻 Technologies
 - Single SPA;
 - Angular@15;
 - React@18;
@@ -10,7 +10,7 @@ Desafio desenvolvido para a vaga de Desenvolvedor Front-End pela [Teddy Open Fin
 - Tailwindcss;
 - Docker;
 
-# Setup
+# ⚙️ Setup
 Para realizar o setup do projeto é necessário ter ambiente com as seguintes ferramentas:
 - PNPM@8.6.12
 - Node@21.7.3
@@ -19,7 +19,7 @@ Para realizar o setup do projeto é necessário ter ambiente com as seguintes fe
 
 Também é possível realizar o setup utilizando Docker, facilitando na hora de subir a aplicação.
 
-## Setup Commands
+## ⚙️ Setup Commands
 1. **Single SPA server**
 ```bash
 pnpm i
@@ -38,7 +38,7 @@ pnpm i
 pnpm start
 ```
 
-# Docker Setup
+# 🐋 Docker Setup
 
 Para simplificar o setup do projeto, você pode utilizar Docker e Docker Compose para subir a aplicação e seus micro frontends. Siga os passos abaixo:
 
@@ -68,7 +68,7 @@ Angular-MFE: http://localhost:8081
 3. **Acessar a aplicação:**
 Agora você pode acessar a aplicação principal pela URL do Single SPA (http://localhost:9000) e navegar entre os Front-Ends.
 
-# Páginas/Funcionalidades
+# 💻 Páginas/Funcionalidades
 
 ## Login
 
