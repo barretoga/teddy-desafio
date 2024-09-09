@@ -44,13 +44,13 @@ const Drawer: FC = () => {
               className="w-4 h-4"
             />
           </button>
-          <a href="/partners" className="text-lg hover:underline">
+          <a href="/partners/list" className="text-lg hover:underline">
             Parceiros
           </a>
           <a href="/partners/register" className="text-lg hover:underline">
             Cadastrar parceiro
           </a>
-          <a href="/external-companies" className="text-lg hover:underline">
+          <a href="/external-companies/list" className="text-lg hover:underline">
             Empresas externas
           </a>
           <a

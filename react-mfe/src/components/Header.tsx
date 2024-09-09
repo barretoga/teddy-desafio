@@ -47,7 +47,7 @@ const Header: FC = () => {
           className="hidden sm:block"
         >
           <img
-            src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" // URL do ícone de logout
+            src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png"
             alt="Logout"
             className="w-[20px] h-[20px] hover:cursor-pointer ml-4"
           />

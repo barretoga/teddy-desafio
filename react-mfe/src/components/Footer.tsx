@@ -32,7 +32,7 @@ const Footer: FC = () => {
               </li>
               <li className="mb-6">
                 <a
-                  href="/partners"
+                  href="/partners/list"
                   className="text-gray-600 hover:text-gray-900"
                 >
                   Parceiros
@@ -40,7 +40,7 @@ const Footer: FC = () => {
               </li>
               <li className="mb-6">
                 <a
-                  href="/external-companies"
+                  href="/external-companies/list"
                   className="text-gray-600 hover:text-gray-900"
                 >
                   Empresas externas

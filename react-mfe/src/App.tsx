@@ -24,7 +24,7 @@ export default function Root(props) {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/partners" element={<Partners />} />
+          <Route path="/partners/list" element={<Partners />} />
           <Route path="/partners/register" element={<RegisterPartner />} />
           <Route path="/partners/edit/:id" element={<EditPartner />} />
         </Route>

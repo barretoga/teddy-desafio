@@ -27,7 +27,7 @@ const RegisterPartner = () => {
       await axios.post(`${baseUrl}/partners`, data);
       alert("Parceiro criado com sucesso!");
       reset();
-      navigate("/partners");
+      navigate("/partners/list");
     } catch (error) {
       console.error("Erro ao criar parceiro", error);
       alert("Ocorreu um erro ao criar o parceiro.");
@@ -187,7 +187,7 @@ const RegisterPartner = () => {
 
         <div className="flex justify-between mt-6">
           <a
-            href="/partners"
+            href="/partners/list"
             className="px-6 py-2 bg-gray-300 text-gray-700 hover:text-white rounded hover:bg-gray-800 transition-all duration-200"
           >
             Voltar

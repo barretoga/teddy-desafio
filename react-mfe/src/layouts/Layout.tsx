@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <div className="grid mx-auto mt-[5rem]">
       <Header />
-      <div className="h-[88vh]">
+      <div className="h-full">
         <Outlet />
       </div>
       <Footer />

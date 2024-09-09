@@ -54,7 +54,7 @@ const EditPartner = () => {
         projects: data.projects.map((project) => project.trim()),
       });
       alert("Parceiro atualizado com sucesso!");
-      navigate("/partners");
+      navigate("/partners/list");
     } catch (error) {
       console.error("Erro ao atualizar parceiro", error);
       alert("Ocorreu um erro ao atualizar o parceiro.");
@@ -214,7 +214,7 @@ const EditPartner = () => {
 
         <div className="flex justify-between mt-6">
           <a
-            href="/partners"
+            href="/partners/list"
             className="px-6 py-2 bg-gray-300 text-gray-700 hover:text-white rounded hover:bg-gray-800 transition-all duration-200"
           >
             Voltar

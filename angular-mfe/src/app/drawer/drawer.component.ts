@@ -15,6 +15,12 @@ export class DrawerComponent {
     this.isOpen = !this.isOpen;
   }
 
+  navigateTo(route: string) {
+    const baseUrl = window.location.origin;
+    const loginUrl = `${baseUrl}/${route}`;
+    window.location.href = loginUrl;
+  }
+
   handleLogout() {
     localStorage.removeItem('user');
     localStorage.removeItem('keepLogin');

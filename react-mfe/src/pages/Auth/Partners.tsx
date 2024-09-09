@@ -157,16 +157,16 @@ const Partners: FC = () => {
                   <td className="px-6 py-4 text-sm text-gray-500">
                     {partner.projects.length}
                   </td>
-                  <td className="px-6 py-4 text-sm font-medium">
+                  <td className="py-4 text-sm text-gray-500 flex space-x-2">
                     <button
                       onClick={() => handleEdit(partner.id)}
-                      className="text-indigo-600 hover:text-indigo-900 mr-4"
+                      className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition-all duration-200"
                     >
                       Editar
                     </button>
                     <button
                       onClick={() => handleDelete(partner.id)}
-                      className="text-red-600 hover:text-red-900"
+                      className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition-all duration-200"
                     >
                       Deletar
                     </button>
