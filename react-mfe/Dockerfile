@@ -7,9 +7,6 @@ WORKDIR /app
 # Instale pnpm globalmente
 RUN npm install -g pnpm@8.6.12
 
-# Instala o webpack globalmente
-RUN pnpm add -g webpack@5 webpack-cli@5
-
 # Copie os arquivos de configuração do projeto e instale as dependências
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install
